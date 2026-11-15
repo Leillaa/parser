@@ -1,0 +1,14 @@
+# результаты локальных запусков
+output/
+
+# Python
+__pycache__/
+*.pyc
+
+# локальные настройки и пароли
+.env
+
+# macOS / IDE
+.DS_Store
+.vscode/
+.idea/

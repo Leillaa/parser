@@ -1,0 +1,44 @@
+Базовый адрес:
+https://api.kinomax.ru/rest
+
+✅ 1. Проверенные API (формат API, Метод, Что возвращает)
+/movies?limit=100&listing=kinoteka, GET, Список фильмов из «Кинотеки»
+
+/movies/{movie_id}, GET, Информация о конкретном фильме
+
+/movies/{movie_id}/sessions, GET, Кинотеатры и сеансы конкретного фильма
+
+/sessions/{session_id}/hallplan?source=site&seatDisplay=1, GET, Схема зала, цены и статусы кресел
+тут в хеадерс надо указать: Did, значение: f2b4a919-f86b-4092-b362-f6617268f8f7
+
+/cinemas-simplified, GET, Упрощённый список кинотеатров с ID
+
+
+✏️ 2. Найденные но не проверенные API (формат API, Назначение)
+/locations, Список городов
+
+/movies, Каталог фильмов
+
+/cinemas, Список кинотеатров
+
+/cinemas/{cinema_id}, Информация о кинотеатре
+
+/cinemas/{cinema_id}/sessions, Расписание конкретного кинотеатра
+
+/sessions-by-location, Сеансы по городу
+
+/cinemas-simplified, Упрощённый список кинотеатров
+
+📌 3. Дополнительные параметры
+
+Для /movies:
+limit=100
+listing=kinoteka
+cinema_id=10
+
+Примеры: 
+https://api.kinomax.ru/rest/movies?limit=100&listing=kinoteka
+https://api.kinomax.ru/rest/movies/7998
+https://api.kinomax.ru/rest/movies/7998/sessions?cinema_id=10
+https://api.kinomax.ru/rest/sessions/3935177/hallplan?source=site&seatDisplay=1
+*Did f2b4a919-f86b-4092-b362-f6617268f8f7*
